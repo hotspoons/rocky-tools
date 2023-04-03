@@ -600,11 +600,11 @@ collect_system_info () {
     declare -g -a managed_repos
     pkg_repo_map=(
         [baseos]=rootfiles.noarch
-        [appstream]=apr-util-ldap.$ARCH
-        [ha]=pacemaker-doc.noarch
-        [powertools]=libaec-devel.$ARCH
-        [extras]=epel-release.noarch
-        [devel]=quota-devel.$ARCH
+        [appstream]=libxkbcommon.$ARCH
+ #       [ha]=pacemaker-doc.noarch
+ #       [powertools]=libaec-devel.$ARCH
+ #       [extras]=epel-release.noarch
+ #       [devel]=quota-devel.$ARCH
     )
 
     dist_id=$(os-release ID)
@@ -623,10 +623,10 @@ collect_system_info () {
     dist_repourl_map=(
 	[centos:baseos]=https://dl.rockylinux.org/vault/centos/8.5.2111/BaseOS/$ARCH/os/
 	[centos:appstream]=https://dl.rockylinux.org/vault/centos/8.5.2111/AppStream/$ARCH/os/
-	[centos:ha]=https://dl.rockylinux.org/vault/centos/8.5.2111/HighAvailability/$ARCH/os/
-	[centos:powertools]=https://dl.rockylinux.org/vault/centos/8.5.2111/PowerTools/$ARCH/os/
-	[centos:extras]=https://dl.rockylinux.org/vault/centos/8.5.2111/extras/$ARCH/os/
-	[centos:devel]=https://dl.rockylinux.org/vault/centos/8.5.2111/Devel/$ARCH/os/
+#	[centos:ha]=https://dl.rockylinux.org/vault/centos/8.5.2111/HighAvailability/$ARCH/os/
+#	[centos:powertools]=https://dl.rockylinux.org/vault/centos/8.5.2111/PowerTools/$ARCH/os/
+#	[centos:extras]=https://dl.rockylinux.org/vault/centos/8.5.2111/extras/$ARCH/os/
+#	[centos:devel]=https://dl.rockylinux.org/vault/centos/8.5.2111/Devel/$ARCH/os/
     )
 
     # In case migration is attempted from very old CentOS (before the repository
