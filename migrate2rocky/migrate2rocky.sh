@@ -365,7 +365,7 @@ repoquery () {
     local name val prev result
     result=$(safednf -y -q "${dist_repourl_swaps[@]}" \
 	--setopt=epel.excludepkgs=epel-release repoquery -i "$1") ||
-    	exit_message "Failed to fetch info for package $1."
+    	echo "Failed to fetch info for package $1."
     if ! [[ $result ]]; then
         # We didn't match this package, the repo could be disabled.
         return 1
